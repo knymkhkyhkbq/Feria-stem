@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feria STEAM - Liceo en Artes Matías Ramón Mella</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="main-container">
+        <header class="header">
+            <div class="logo-container">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-0x8aVBuBvAv5ZMYpZ4mpDLeQ3w6ofL.png" alt="STEAM Education Logo" class="steam-logo">
+            </div>
+            <div class="header-content">
+                <h1 class="main-title">Feria de STEAM</h1>
+                <h2 class="school-name">Liceo en Artes Matías Ramón Mella</h2>
+            </div>
+        </header>
+
+        <section class="hero-section">
+            <div class="overlay"></div>
+            <div class="hero-content">
+                <div class="announcement">
+                    <h2 class="announcement-title">¡Nos vemos en la 2da ronda, la ronda distrital!</h2>
+                    <p class="announcement-text">Representando a nuestro liceo Matías Ramón Mella en Higuei y nuestro distrito</p>
+                </div>
+
+                <div class="countdown-container">
+                    <h3 id="countdown-title" class="countdown-title">Ronda Distrital</h3>
+                    <div class="countdown-message">Faltan</div>
+                    <div class="countdown">
+                        <div class="countdown-item">
+                            <div class="countdown-value" id="days">00</div>
+                            <div class="countdown-label">Días</div>
+                        </div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-item">
+                            <div class="countdown-value" id="hours">00</div>
+                            <div class="countdown-label">Horas</div>
+                        </div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-item">
+                            <div class="countdown-value" id="minutes">00</div>
+                            <div class="countdown-label">Minutos</div>
+                        </div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-item">
+                            <div class="countdown-value" id="seconds">00</div>
+                            <div class="countdown-label">Segundos</div>
+                        </div>
+                    </div>
+                    
+                    <div class="event-start" id="event-start" style="display: none;">
+                        <h2>¡Ha finalizado la Ronda Distrital!</h2>
+                        <div class="celebrate">🎉🔬🎨🔧🧮</div>
+                    </div>
+                    
+                    <div id="second-countdown" class="second-countdown" style="display: none;">
+                        <h3>¡Ahora nos preparamos para la Ronda Regional!</h3>
+                    </div>
+                    
+                    <div id="final-message" class="final-message" style="display: none;">
+                        <h2>¡Ha comenzado la Ronda Regional!</h2>
+                        <div class="celebrate">🏆🔬🎨🔧🧮</div>
+                        <p>¡Estamos representando con orgullo a nuestro distrito!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-section">
+            <h2 class="section-title">Proyectos Seleccionados para la Siguiente Ronda</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="project-title">BioEnergía RD</h3>
+                    <p class="project-description">Proyecto innovador sobre energías renovables y sostenibilidad ambiental.</p>
+                    <div class="project-tags">
+                        <span class="tag science">Ciencia</span>
+                        <span class="tag engineering">Ingeniería</span>
+                    </div>
+                    <a href="https://bio-energ-a-rd-2a2u.vercel.app/" target="_blank" class="project-link">
+                        <i class="fas fa-external-link-alt"></i> Visitar Proyecto
+                    </a>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="project-title">Robótica</h3>
+                    <p class="project-description">Proyecto de robótica aplicada a soluciones prácticas y educativas.</p>
+                    <div class="project-tags">
+                        <span class="tag technology">Tecnología</span>
+                        <span class="tag engineering">Ingeniería</span>
+                    </div>
+                    <a href="#" class="project-link disabled">
+                        <i class="fas fa-external-link-alt"></i> Próximamente
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="next-round-section">
+            <div class="next-round-content">
+                <h2 class="section-title">Sobre la Ronda Regional</h2>
+                <div class="info-container">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Fecha</h3>
+                            <p>2 de Mayo, 2025</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Lugar</h3>
+                            <p>Centro Regional de Educación</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Participantes</h3>
+                            <p>Escuelas seleccionadas de la región</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="round-description">
+                    <p>La Ronda Regional es una oportunidad para que nuestros estudiantes demuestren sus proyectos innovadores ante un público más amplio y compitan con otras escuelas de la región. Los proyectos seleccionados representarán con orgullo a nuestro distrito y mostrarán el talento y la creatividad de nuestros estudiantes.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Feria STEAM</h3>
+                    <p>Liceo en Artes Matías Ramón Mella</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Proyectos</a></li>
+                        <li><a href="#">Galería</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Higuei, República Dominicana</p>
+                    <p><i class="fas fa-envelope"></i> bioenergiardoficial@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-credits">
+                <p>Creado por los estudiantes: Victor de Jesus e Israel Josué Melo Rosario</p>
+                <p>&copy; 2025 Liceo en Artes Matías Ramón Mella - Todos los derechos reservados</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
