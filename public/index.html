@@ -6,8 +6,8 @@
     <title>Feria STEAM - Liceo en Artes Matías Ramón Mella</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="icon" href="https://media.discordapp.net/attachments/1237918448919515146/1359566499102331184/f5nkSsqK6ak62ZHL0anPzxmt3Oy9rzYBErfa7UO1IwLSBEjc0uioIBFQmwCJW32odoRAWkCJG5pdFSQCKhNgMStdvtQ7YiANAEStzQ6KkgE1CZA4la7fah2RECaAIlbGh0VJAJqEyBxq90VDsiIE2AxC2NjgoSAbUJkLjVbhqHRGQJkDilkZHBYmA2gRI3Gq3D9WOCEgTIHFLo6OCREBtAiRutduHakcEpAmQuKXRUUEioDYBErfa7UO1IwLSBEjc0uioIBFQmwCJW32odoRAWkCJG5pdFSQCKhNgMStdvtQ7YiANAEStzQ6KkgE1CZA4la7fah2RECaAIlbGh0VJAJqEyBxq90VDsiIE2AxC2NjgoSAbUJkLjVbhqHRGQJkDilkZHBYmA2gRI3Gq3D9WOCEgTIHFLo6OCREBtAiRutduHakcEpAmQuKXRUUEioDaBvwE8pJRMTXXpwAAAABJRU5ErkJggg.png?ex=67f7f278&is=67f6a0f8&hm=193d4754fd5554226a17dabd417a0ab1debdca3452beae3320f401e3f82b3a19&=&format=webp&quality=lossless">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="https://media.discordapp.net/attachments/1237918448919515146/1359566499102331184/f5nkSsqK6ak62ZHL0anPzxmt3Oy9rzYBErfa7UO1IwLSBEjc0uioIBFQmwCJW32odoRAWkCJG5pdFSQCKhNgMStdvtQ7YiANAEStzQ6KkgE1CZA4la7fah2RECaAIlbGh0VJAJqEyBxq90VDsiIE2AxC2NjgoSAbUJkLjVbhqHRGQJkDilkZHBYmA2gRI3Gq3D9WOCEgTIHFLo6OCREBtAiRutduHakcEpAmQuKXRUUEioDYBErfa7UO1IwLSBEjc0uioIBFQmwCJW32odoRAWkCJG5pdFSQCKhNgMStdvtQ7YiANAEStzQ6KkgE1CZA4la7fah2RECaAIlbGh0VJAJqEyBxq90VDsiIE2AxC2NjgoSAbUJkLjVbhqHRGQJkDilkZHBYmA2gRI3Gq3D9WOCEgTIHFLo6OCREBtAiRutduHakcEpAmQuKXRUUEioDaBvwE8pJRMTXXpwAAAABJRU5ErkJggg.png?ex=67f7f278&is=67f6a0f8&hm=193d4754fd5554226a17dabd417a0ab1debdca3452beae3320f401e3f82b3a19&=&format=webp&quality=lossless">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -108,6 +108,211 @@
                 </div>
             </div>
         </section>
+
+        <!-- Nueva sección de Galería -->
+        <section class="gallery-section">
+            <h2 class="section-title">Galería de Imágenes</h2>
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="science">Ciencia</button>
+                <button class="filter-btn" data-filter="technology">Tecnología</button>
+                <button class="filter-btn" data-filter="engineering">Ingeniería</button>
+                <button class="filter-btn" data-filter="math">Matemáticas</button>
+            </div>
+            <div class="gallery-container">
+                <!-- Imágenes de la galería (25 en total) -->
+                <div class="gallery-item" data-category="science">
+                    <img src="/img/ciencia1.jpeg" alt="Proyecto de Ciencia 1" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">Proyecto de Ciencia </div>
+                        <div class="gallery-item-category">Ciencia</div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="technology">
+                    <img src="/img/robotica.jpeg" alt="Proyecto de Tecnología 1" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">Proyecto de Tecnología </div>
+                        <div class="gallery-item-category">Tecnología</div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="engineering">
+                    <img src="/img/bio.jpeg" alt="Proyecto de Ingeniería 1" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">Proyecto de Ingeniería </div>
+                        <div class="gallery-item-category">Ingeniería</div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="technology">
+                    <img src="/img/robotica6.jpeg" alt="Proyecto de Artes 1" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">Proyecto de Tecnología</div>
+                        <div class="gallery-item-category">Tecnología</div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="math">
+                    <img src="/img/matematica1.jpeg" alt="Proyecto de Matemáticas 1" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">Proyecto de Matemáticas </div>
+                        <div class="gallery-item-category">Matemáticas</div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="science">
+                    <img src="/img/ciencia3.jpeg" alt="Proyecto de Ciencia 2" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">Proyecto de Ciencia </div>
+                        <div class="gallery-item-category">Ciencia</div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="technology">
+                    <img src="/img/robatica 2.jpeg" alt="Proyecto de Tecnología 2" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">Proyecto de Tecnología </div>
+                        <div class="gallery-item-category">Tecnología</div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="engineering">
+                    <img src="/img/bioenergia rd.jpeg" alt="Proyecto de Ingeniería " loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">Proyecto de Ingeniería </div>
+                        <div class="gallery-item-category">Ingeniería</div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="science">
+                    <img src="/img/ciencia4.jpeg" alt="Proyecto de Artes 2" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">Proyecto de Ciencia </div>
+                        <div class="gallery-item-category">Ciencia</div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="math">
+                    <img src="/img/matematica2.jpeg" alt="Proyecto de Matemáticas 2" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">Proyecto de Matemáticas </div>
+                        <div class="gallery-item-category">Matemáticas</div>
+                    </div>
+                </div>
+                <!-- Continuar con más imágenes hasta completar 25 -->
+                <div class="gallery-item" data-category="science">
+                    <img src="/img/ciencia5.jpeg" alt="Proyecto de Ciencia 3" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">Proyecto de Ciencia </div>
+                        <div class="gallery-item-category">Ciencia</div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="technology">
+                    <img src="/img/robotica 4.jpeg" alt="Proyecto de Tecnología 3" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">Proyecto de Tecnología </div>
+                        <div class="gallery-item-category">Tecnología</div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="science">
+                    <img src="/img/ciencia6.jpeg" alt="Proyecto de Ingeniería 3" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">Proyecto de Ciencia </div>
+                        <div class="gallery-item-category">Ciencia</div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="science">
+                    <img src="/img/ciencia7.jpeg" alt="Proyecto de Artes 3" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">Proyecto de Ciencia </div>
+                        <div class="gallery-item-category">Ciencia</div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="math">
+                    <img src="/img/matematica3.jpeg" alt="Proyecto de Matemáticas 3" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">Proyecto de Matemáticas </div>
+                        <div class="gallery-item-category">Matemáticas</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="science">
+                    <img src="/img/ciencia8.jpeg" alt="Proyecto de Ciencia 4" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">Proyecto de Ciencia </div>
+                        <div class="gallery-item-category">Ciencia</div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="technology">
+                    <img src="/img/robotica 4.jpeg" alt="Proyecto de Tecnología 4" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">Proyecto de Tecnología </div>
+                        <div class="gallery-item-category">Tecnología</div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="science">
+                    <img src="/img/ciencia9.jpeg" alt="Proyecto de Ingeniería 4" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">Proyecto de Ciencia </div>
+                        <div class="gallery-item-category">Ciencia</div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="science">
+                    <img src="/img/ciencia10.jpeg" alt="Proyecto de Artes 4" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">Proyecto de Ciencia </div>
+                        <div class="gallery-item-category">Ciencia</div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="math">
+                    <img src="/img/matematica4.jpeg" alt="Proyecto de Matemáticas 4" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">Proyecto de Matemáticas </div>
+                        <div class="gallery-item-category">Matemáticas</div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="science">
+                    <img src="/img/ciencia11.jpeg" alt="Proyecto de Ciencia 5" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">Proyecto de Ciencia </div>
+                        <div class="gallery-item-category">Ciencia</div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="technology">
+                    <img src="/img/robotica 5.jpeg" alt="Proyecto de Tecnología 5" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">Proyecto de Tecnología </div>
+                        <div class="gallery-item-category">Tecnología</div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="science">
+                    <img src="/img/ciencia1.jpeg" alt="Proyecto de Ingeniería 5" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">Proyecto de Ciencia </div>
+                        <div class="gallery-item-category">Ciencia</div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="science">
+                    <img src="/img/ciencia12.jpeg" alt="Proyecto de Artes 5" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">Proyecto de Ciencia </div>
+                        <div class="gallery-item-category">Ciencia</div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="math">
+                    <img src="/img/matematica5.jpeg" alt="Proyecto de Matemáticas 5" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">Proyecto de Matemáticas </div>
+                        <div class="gallery-item-category">Matemáticas</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox para la galería -->
+        <div class="lightbox" id="gallery-lightbox">
+            <div class="lightbox-content">
+                <span class="lightbox-close">&times;</span>
+                <img class="lightbox-image" id="lightbox-image" src="/placeholder.svg" alt="Imagen ampliada">
+                <div class="lightbox-caption" id="lightbox-caption"></div>
+                <div class="lightbox-controls">
+                    <button class="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
 
         <section class="next-round-section">
             <div class="next-round-content">
