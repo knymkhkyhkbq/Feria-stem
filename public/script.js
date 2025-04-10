@@ -145,4 +145,109 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Iniciar partículas
   createParticles()
+
+  // Funcionalidad de la galería
+  const galleryItems = document.querySelectorAll(".gallery-item")
+  const lightbox = document.getElementById("gallery-lightbox")
+  const lightboxImage = document.getElementById("lightbox-image")
+  const lightboxCaption = document.getElementById("lightbox-caption")
+  const lightboxClose = document.querySelector(".lightbox-close")
+  const lightboxPrev = document.querySelector(".lightbox-prev")
+  const lightboxNext = document.querySelector(".lightbox-next")
+  const filterButtons = document.querySelectorAll(".filter-btn")
+
+  let currentImageIndex = 0
+  let filteredItems = [...galleryItems]
+
+  // Filtrar imágenes de la galería
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      // Remover clase activa de todos los botones
+      filterButtons.forEach((btn) => btn.classList.remove("active"))
+
+      // Añadir clase activa al botón clickeado
+      button.classList.add("active")
+
+      const filter = button.getAttribute("data-filter")
+
+      // Filtrar elementos
+      galleryItems.forEach((item) => {
+        if (filter === "all" || item.getAttribute("data-category") === filter) {
+          item.style.display = "block"
+        } else {
+          item.style.display = "none"
+        }
+      })
+
+      // Actualizar lista filtrada
+      filteredItems = [...galleryItems].filter(
+        (item) => filter === "all" || item.getAttribute("data-category") === filter,
+      )
+    })
+  })
+
+  // Abrir lightbox al hacer clic en una imagen
+  galleryItems.forEach((item, index) => {
+    item.addEventListener("click", () => {
+      const imgSrc = item.querySelector("img").src
+      const title = item.querySelector(".gallery-item-title").textContent
+      const category = item.querySelector(".gallery-item-category").textContent
+
+      lightboxImage.src = imgSrc
+      lightboxCaption.textContent = `${title} - ${category}`
+      lightbox.classList.add("active")
+
+      // Guardar índice de la imagen actual
+      currentImageIndex = filteredItems.indexOf(item)
+    })
+  })
+
+  // Cerrar lightbox
+  lightboxClose.addEventListener("click", () => {
+    lightbox.classList.remove("active")
+  })
+
+  // También cerrar al hacer clic fuera de la imagen
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.remove("active")
+    }
+  })
+
+  // Navegación en el lightbox
+  lightboxPrev.addEventListener("click", () => {
+    currentImageIndex = (currentImageIndex - 1 + filteredItems.length) % filteredItems.length
+    updateLightboxImage()
+  })
+
+  lightboxNext.addEventListener("click", () => {
+    currentImageIndex = (currentImageIndex + 1) % filteredItems.length
+    updateLightboxImage()
+  })
+
+  // Actualizar imagen en el lightbox
+  function updateLightboxImage() {
+    const currentItem = filteredItems[currentImageIndex]
+    const imgSrc = currentItem.querySelector("img").src
+    const title = currentItem.querySelector(".gallery-item-title").textContent
+    const category = currentItem.querySelector(".gallery-item-category").textContent
+
+    lightboxImage.src = imgSrc
+    lightboxCaption.textContent = `${title} - ${category}`
+  }
+
+  // Navegación con teclado
+  document.addEventListener("keydown", (e) => {
+    if (!lightbox.classList.contains("active")) return
+
+    if (e.key === "Escape") {
+      lightbox.classList.remove("active")
+    } else if (e.key === "ArrowLeft") {
+      currentImageIndex = (currentImageIndex - 1 + filteredItems.length) % filteredItems.length
+      updateLightboxImage()
+    } else if (e.key === "ArrowRight") {
+      currentImageIndex = (currentImageIndex + 1) % filteredItems.length
+      updateLightboxImage()
+    }
+  })
 })
