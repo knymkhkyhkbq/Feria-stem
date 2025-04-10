@@ -404,6 +404,209 @@ body {
   cursor: not-allowed;
 }
 
+/* Gallery Section */
+.gallery-section {
+  padding: 4rem 2rem;
+  background-color: #0c0c0c;
+}
+
+.gallery-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  padding: 0.6rem 1.2rem;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: 30px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.filter-btn.active {
+  background: var(--color-technology);
+  border-color: var(--color-technology);
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  height: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-item-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-item-overlay {
+  transform: translateY(0);
+}
+
+.gallery-item-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+
+.gallery-item-category {
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+.gallery-item[data-category="science"] .gallery-item-category {
+  color: var(--color-science);
+}
+
+.gallery-item[data-category="technology"] .gallery-item-category {
+  color: var(--color-technology);
+}
+
+.gallery-item[data-category="engineering"] .gallery-item-category {
+  color: var(--color-engineering);
+}
+
+.gallery-item[data-category="arts"] .gallery-item-category {
+  color: var(--color-arts);
+}
+
+.gallery-item[data-category="math"] .gallery-item-category {
+  color: var(--color-math);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 80vh;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.lightbox-caption {
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1.1rem;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.lightbox-close:hover {
+  color: var(--color-engineering);
+}
+
+.lightbox-controls {
+  position: absolute;
+  bottom: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lightbox-prev,
+.lightbox-next {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.lightbox-prev {
+  margin-left: -50px;
+}
+
+.lightbox-next {
+  margin-right: -50px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: var(--color-technology);
+}
+
 /* Next Round Section */
 .next-round-section {
   padding: 4rem 2rem;
@@ -664,6 +867,10 @@ body {
   .info-container {
     gap: 1.5rem;
   }
+
+  .gallery-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
 }
 
 @media (max-width: 768px) {
@@ -714,8 +921,13 @@ body {
   }
 
   .projects-section,
-  .next-round-section {
+  .next-round-section,
+  .gallery-section {
     padding: 3rem 1rem;
+  }
+
+  .gallery-container {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   }
 
   .footer {
@@ -725,6 +937,14 @@ body {
   .footer-content {
     flex-direction: column;
     gap: 2rem;
+  }
+
+  .lightbox-prev {
+    margin-left: -20px;
+  }
+
+  .lightbox-next {
+    margin-right: -20px;
   }
 }
 
@@ -796,5 +1016,23 @@ body {
 
   .round-description {
     padding: 1.5rem;
+  }
+
+  .gallery-container {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1rem;
+  }
+
+  .gallery-item {
+    height: 150px;
+  }
+
+  .gallery-item-title {
+    font-size: 0.9rem;
+  }
+
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
   }
 }
